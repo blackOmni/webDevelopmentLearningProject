@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <header class="app-header">
+        <h2>Temperature Converter</h2>
+        <p>Enter a value in any field to convert instantly.</p>
+      </header>
+
+      <form class="converter-form" id="tempForm" autocomplete="off">
+        <!-- Celsius Group -->
+        <div class="input-group cel-group">
+          <label for="celsius">Celsius (°C)</label>
+          <div class="input-wrapper">
+            <input type="number" id="celsius" step="any" placeholder="0" />
+            <span class="unit-badge">°C</span>
+          </div>
+        </div>
+
+        <!-- Fahrenheit Group -->
+        <div class="input-group fah-group">
+          <label for="fahrenheit">Fahrenheit (°F)</label>
+          <div class="input-wrapper">
+            <input type="number" id="fahrenheit" step="any" placeholder="32" />
+            <span class="unit-badge">°F</span>
+          </div>
+        </div>
+
+        <!-- Kelvin Group -->
+        <div class="input-group kel-group">
+          <label for="kelvin">Kelvin (K)</label>
+          <div class="input-wrapper">
+            <input type="number" id="kelvin" step="any" placeholder="273.15" />
+            <span class="unit-badge">K</span>
+          </div>
+        </div>
+
+        <!-- Reset Button -->
+        <button type="reset" id="resetBtn">Clear Fields</button>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

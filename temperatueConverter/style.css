@@ -1,0 +1,149 @@
+/* Modern Global Core Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa; /* Soft off-white to make the card pop */
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #212529;
+}
+
+/* Card Container with soft drop-shadows */
+.main-container {
+  background-color: #ffffff; /* Crisp white layout card */
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.04),
+    0 1px 8px rgba(0, 0, 0, 0.02);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* Header Design */
+.app-header h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #1a1d20;
+}
+
+.app-header p {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 6px;
+  margin-bottom: 30px;
+}
+
+/* Form Layout */
+.converter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Styled Input Container with Integrated Badges */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 14px 50px 14px 16px; /* Room for badge right-side placement */
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  background-color: #ffffff;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.unit-badge {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #adb5bd;
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+/* Individual Interactive Accents when Focusing Inputs */
+.cel-group input:focus {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.15);
+}
+.cel-group input:focus + .unit-badge {
+  color: #ff6b6b;
+}
+
+.fah-group input:focus {
+  border-color: #ff922b;
+  box-shadow: 0 0 0 4px rgba(255, 146, 43, 0.15);
+}
+.fah-group input:focus + .unit-badge {
+  color: #ff922b;
+}
+
+.kel-group input:focus {
+  border-color: #339af0;
+  box-shadow: 0 0 0 4px rgba(51, 154, 240, 0.15);
+}
+.kel-group input:focus + .unit-badge {
+  color: #339af0;
+}
+
+/* Micro-interaction Hover for non-focused elements */
+.input-wrapper input:hover:not(:focus) {
+  border-color: #ced4da;
+}
+
+/* Clean, Minimalist Reset Button */
+#resetBtn {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #f1f3f5;
+  color: #495057;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#resetBtn:hover {
+  background-color: #e9ecef;
+  color: #212529;
+}
