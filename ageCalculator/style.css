@@ -1,0 +1,145 @@
+/* Modern Reset & Colors */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --reset-color: #ef4444;
+  --reset-hover: #dc2626;
+  --bg-main: #ffffff;
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #4b5563;
+  --border-color: #d1d5db;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-main);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* App Container Card */
+.container {
+  background-color: var(--card-bg);
+  width: 100%;
+  max-width: 400px;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.main-heading {
+  color: var(--text-main);
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Form Layout & Inputs */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  color: var(--text-main);
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+input[type="date"]:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+/* Button Layout Group */
+.button-group {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+}
+
+/* Base Button Styling */
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Submit Style */
+.btn-submit {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Reset Style */
+.btn-reset {
+  background-color: #f3f4f6;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+.btn-reset:hover {
+  background-color: #e5e7eb;
+  color: var(--text-main);
+}
+
+/* Result Box Footer */
+.container-footer {
+  margin-top: 8px;
+  padding: 16px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+  color: var(--text-main);
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+}
