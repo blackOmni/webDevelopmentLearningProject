@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container hide-hours">
+      <button id="themeToggle" class="theme-toggle-btn" title="Toggle Theme">
+        🌑
+      </button>
+
+      <div class="mode-selectors" id="modeSelectors">
+        <label class="checkbox-container">
+          <input type="checkbox" id="hoursSetToggle" />
+          <span class="hover-text">Hours Set</span>
+        </label>
+        <label class="checkbox-container">
+          <input type="checkbox" id="minSetToggle" checked />
+          <span class="hover-text">Min Set</span>
+        </label>
+      </div>
+
+      <form id="timerForm" class="form-container">
+        <label class="form-title">Set Timer Duration</label>
+        <div class="input-group">
+          <div class="input-box hour-field">
+            <input
+              type="number"
+              id="setupHours"
+              min="0"
+              max="24"
+              placeholder="00"
+              value="00"
+            />
+            <span>HH</span>
+          </div>
+          <span class="colon hour-field">:</span>
+          <div class="input-box">
+            <input
+              type="number"
+              id="setupMinutes"
+              min="0"
+              max="59"
+              placeholder="25"
+              value="25"
+            />
+            <span>MM</span>
+          </div>
+          <span class="colon">:</span>
+          <div class="input-box">
+            <input
+              type="number"
+              id="setupSeconds"
+              min="0"
+              max="59"
+              placeholder="00"
+              value="00"
+            />
+            <span>SS</span>
+          </div>
+        </div>
+        <button type="submit" class="btn-primary">Set Timer</button>
+      </form>
+
+      <div class="timerContainer hidden" id="timerContainer">
+        <h1>Pomodoro Timer</h1>
+        <div class="timer" id="timerDisplay">00:25:00</div>
+
+        <div class="control-buttons">
+          <button id="startBtn" class="btn-success">Start</button>
+          <button id="stopBtn" class="btn-danger">Stop</button>
+          <button id="restartBtn" class="btn-warning">Restart</button>
+          <button id="resetBtn" class="btn-secondary">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

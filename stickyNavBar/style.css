@@ -1,0 +1,117 @@
+/* --- 1. Define Theme Colors --- */
+:root {
+  --bg-color: #f9f9f9;
+  --panel-bg: #ffffff;
+  --text-color: #333333;
+  --heading-color: #2c3e50;
+  --link-color: #555555;
+  --accent-color: #3498db;
+}
+
+/* Colors when Dark Theme is active */
+body.dark-theme {
+  --bg-color: #121212;
+  --panel-bg: #1e1e1e;
+  --text-color: #e0e0e0;
+  --heading-color: #ffffff;
+  --link-color: #b0b0b0;
+  --accent-color: #35a2ff;
+}
+
+/* --- 2. Global Styles (Updated to use variables) --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease; /* Smooth transition */
+}
+
+/* --- 3. Sticky Navigation Bar --- */
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--panel-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+}
+
+.link a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-weight: 500;
+  margin-left: 1.5rem;
+  transition: color 0.3s ease;
+  text-transform: capitalize;
+}
+
+.link a:hover {
+  color: var(--accent-color);
+}
+
+/* --- 4. Style the Toggle Button --- */
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 1.5rem;
+  padding: 5px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.theme-btn:hover {
+  transform: scale(1.15);
+}
+
+/* --- 5. Main Content & Footer --- */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+main img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--panel-bg);
+  color: var(--text-color);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 4rem;
+}
