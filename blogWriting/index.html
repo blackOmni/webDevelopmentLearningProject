@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Write Blog</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">LOGO</div>
+        <div class="link">
+          <a href="#"><span>Home</span></a>
+          <a href="#"><span>About</span></a>
+          <a href="#"><span>Connect</span></a>
+        </div>
+        <div class="button">
+          <!-- Theme Toggle Button -->
+          <button class="btn btn-secondary" id="theme-btn">
+            <span>Theme</span>
+          </button>
+
+          <!-- Notification Button Container -->
+          <div class="notification-wrapper">
+            <button class="btn btn-primary"><span>Notification</span></button>
+            <div class="notification-dropdown">
+              <div class="dropdown-header">
+                <h3>Notifications</h3>
+              </div>
+              <ul class="notification-list">
+                <li class="unread">
+                  <p class="notif-title">New Comment</p>
+                  <p class="notif-desc">Ritik liked your recent blog post.</p>
+                </li>
+                <li class="unread">
+                  <p class="notif-title">Limit Reached</p>
+                  <p class="notif-desc">You hit 450 characters on draft.</p>
+                </li>
+                <li>
+                  <p class="notif-title">System Update</p>
+                  <p class="notif-desc">Dark mode feature activated!</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <h2>Real-Time Character Counter</h2>
+        <textarea
+          id="textarea"
+          class="textarea"
+          placeholder="Please write your text here..."
+          maxlength="500"
+        ></textarea>
+        <div class="counter-container">
+          <p>
+            Total Characters:
+            <span class="total-counter" id="total-counter">0</span>
+          </p>
+          <p>
+            Remaining:
+            <span class="remaining-counter" id="remaining-counter">500</span>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="social">
+          <a href="#" class="btn social-btn"><span>Instagram</span></a>
+          <a href="#" class="btn social-btn"><span>WhatsApp</span></a>
+          <a href="#" class="btn social-btn"><span>Telegram</span></a>
+          <a href="#" class="btn social-btn"><span>LinkedIn</span></a>
+        </div>
+        <div class="info">
+          <p><strong>Name:</strong> Ritik</p>
+          <p><strong>Experience:</strong> Learning & Building</p>
+          <p><strong>Goal:</strong> Web Development Master</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
